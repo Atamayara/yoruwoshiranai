@@ -1,0 +1,17 @@
+{
+  "name": "yoruwoshiranai",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://atamayara.github.io/yoruwoshiranai",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2"
+  }
+}

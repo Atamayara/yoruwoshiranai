@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="./icon.png" />
+
+        <!-- Google tag (gtag.js) -->
+
+        <!-- OGP -->
+        <meta
+            name="description"
+            content="ワンクリックで検索除けができます。サーバーにも入力内容は送られません。" />
+        <meta property="og:title" content="かんたん検索除けツール" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="かんたん検索除けツール" />
+        <meta
+            property="og:description"
+            content="ワンクリックで検索除けができます。サーバーにも入力内容は送られません。" />
+        <meta
+            property="og:image"
+            content="https://atamayara.github.io/search-avoider/icon.png" />
+        <meta
+            property="og:url"
+            content="https://atamayara.github.io/search-avoider/" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="かんたん検索除けツール" />
+        <meta
+            property="twitter:description"
+            content="ワンクリックで検索除けができます。サーバーにも入力内容は送られません。" />
+        <meta
+            property="twitter:image"
+            content="https://atamayara.github.io/search-avoider/icon.png" />
+        <meta property="twitter:site" content="@atamayara9" />
+        <meta property="twitter:creator" content="@atamayara9" />
+        <meta property="twitter:domain" content="atamayara.github.io/" />
+
+        <!-- reset.css destyle -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+            rel="stylesheet" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>【悲報】なんJ民、〇〇を知らない</title>
+
+        <script type="module" src="./src/main.ts"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="title">【悲報】なんJ民、〇〇を知らない</h1>
+        </header>
+
+        <main class="main">
+            <section class="input">
+                <select class="pref-select" id="prefSelect"></select>
+                <input
+                    type="datetime-local"
+                    class="datetime"
+                    id="datetime"
+                    step="0.01" />
+                <button type="submit" class="button" id="submitButton">
+                    スタート
+                </button>
+            </section>
+
+            <section class="output">
+                <h2 class="sled-title">【悲報】なんJ民、夜を知らない</h2>
+
+                <section class="post">
+                    <h2 class="post-header">
+                        <span class="post-number">248</span>:<b
+                            class="post-author"
+                            >風吹けば名無し</b
+                        >:<wbr /><span class="post-date" id="postDate">2019/10/12(土)</span
+                        ><span class="post-time" id="postTime">17:35:14.88</span
+                        ><span class="post-author-id"
+                            ><span class="post-author-id-mark">ID</span
+                            >:Fl23DIAX0</span
+                        >
+                    </h2>
+                    <p class="post-content">
+                        <span id="postAreaContent">静岡</span>やけど<span id="postTimeContent">空暗くなってきた</span><br />どういうことや
+                    </p>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="copyright">
+                <a href="https://x.com/atamayara9"
+                    ><small class="small">&copy; 2024-2025 K.eclair</small></a
+                >
+            </p>
+        </footer>
+    </body>
+</html>

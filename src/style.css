@@ -1,0 +1,121 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    @media screen and (width < 480px) {
+        font-size: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+
+    > .title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+
+    > section {
+        &.input {
+            padding: 5vh 10vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            > * {
+                display: block;
+                margin: 1rem;
+            }
+
+            > .datetime,
+            > .pref-select {
+                padding: 0.5rem;
+                width: calc(80vw - 2rem);
+                max-width: 280px;
+                border: 1px solid #000;
+                border-radius: 0.5rem;
+                background-color: #fff;
+                resize: none;
+            }
+
+            > .button {
+                padding: 0.7rem;
+                width: 10rem;
+                border-radius: 2rem;
+                text-align: center;
+                background-color: #33e;
+                color: #fff;
+            }
+        }
+
+        &.output {
+            padding: 0 1rem;
+            border: #000 solid 1px;
+            background-color: #fff;
+
+            > * {
+                margin: 1rem 0;
+
+                &.sled-title {
+                    color: red;
+                }
+
+                > .post-header {
+                    > .post-number,
+                    > .post-date,
+                    > .post-time {
+                        margin-right: 1ch;
+                    }
+
+                    > .post-author {
+                        font-weight: bold;
+                    }
+
+                    .post-author-id-mark {
+                        color: blue;
+                        text-decoration: underline;
+                    }
+                }
+
+                > .post-content {
+                    margin-left: 4ch;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 1rem;
+    width: 100%;
+    background-color: #eee;
+    top: 100vh;
+    position: sticky;
+    text-align: center;
+
+    > .copyright {
+        margin: 1rem;
+
+        > small {
+            font-size: inherit;
+        }
+    }
+}
