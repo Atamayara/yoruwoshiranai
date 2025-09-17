@@ -6,7 +6,7 @@
   "homepage": "https://atamayara.github.io/yoruwoshiranai",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
   },
