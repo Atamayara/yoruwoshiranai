@@ -30,8 +30,9 @@ const messages = [
     '空明るくなってきた',
     '太陽出てきた',
     '空真っ白や',
-    '空暗くなってきた',
+    '空赤くなってきた',
     '太陽ないなった',
+    '空暗くなってきた',
 ];
 
 /** day kanji list */
@@ -144,7 +145,7 @@ function submit() {
         date.getMonth() + 1
     )}-${zeroPad(date.getDate())}`;
     const prefIndex = parseInt(prefSelect.value);
-    const coordinates = `&lat=${pref[prefIndex][1]}&lng=${pref[prefIndex][2]}`;
+    const coordinates = `&lng=${pref[prefIndex][1]}&lat=${pref[prefIndex][2]}`;
     const url = `https://api.sunrise-sunset.org/json?${coordinates}&date=${dataText}&formatted=0&tzid=Asia/Tokyo`;
     fetch(url, {
         method: 'GET',
@@ -156,6 +157,7 @@ function submit() {
         })
         .then((data: responseJson) => {
             console.log(data);
+            console.log(date);
             let flag: number = -1;
             switch (true) {
                 case date.getTime() <
@@ -176,13 +178,18 @@ function submit() {
                     flag = 0;
                     break;
 
+                case date.getTime() > Date.parse(data.results.sunset) + 900000:
+                    flag = 6;
+                    break;
+
                 case date.getTime() > Date.parse(data.results.sunset):
                     flag = 5;
                     break;
-
+                
                 case date.getTime() > Date.parse(data.results.sunset) - 900000:
                     flag = 4;
                     break;
+
 
                 default:
                     flag = 3;
