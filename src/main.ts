@@ -12,6 +12,9 @@ const submitButton = document.getElementById(
     'submitButton'
 ) as HTMLButtonElement;
 
+/** period of time text */
+const periodText = document.getElementById('period') as HTMLSpanElement;
+
 /** area text */
 const areaText = document.getElementById('postAreaContent') as HTMLSpanElement;
 
@@ -33,6 +36,16 @@ const messages = [
     '空赤くなってきた',
     '太陽ないなった',
     '空暗くなってきた',
+];
+
+const period = [
+    '夜',
+    '朝',
+    '日の出',
+    '昼',
+    '夕焼け',
+    '日没',
+    '夜',
 ];
 
 /** day kanji list */
@@ -197,6 +210,7 @@ function submit() {
             }
             areaText.textContent = pref[prefIndex][0];
             timeText.textContent = messages[flag];
+            periodText.textContent = period[flag];
             postDateText.textContent = `${date.toLocaleDateString('ja-JP')}(${
                 weekDay[date.getDay()]
             })`;
