@@ -113,8 +113,13 @@ body {
 
     > .copyright {
         margin: 1rem;
-
-        > small {
+        
+        .link {
+            color: #00e;
+            text-decoration: underline;
+        }
+        
+        .small {
             font-size: inherit;
         }
     }
